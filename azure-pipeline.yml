@@ -14,6 +14,7 @@ jobs:
       filePath: 'jmeter/test.sh'
       arguments: '$PWD CartTest.jmx $(host)'
       workingDirectory: jmeter
+      failOnStderr: true
   - task: PublishPipelineArtifact@1
     displayName: Publish JMeter Report
     inputs:
